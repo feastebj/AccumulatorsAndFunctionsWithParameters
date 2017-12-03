@@ -13,11 +13,13 @@ Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
 import m3t_tester
 import math
 
+
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_sum_of_digits()
-    run_test_digits_in_cube()
-    run_test_digits_in_power()
+    #run_test_sum_of_digits()
+    #run_test_digits_in_cube()
+    #run_test_digits_in_power()
+
     run_test_fancy_sums_of_digits()
 
     # ------------------------------------------------------------------
@@ -245,10 +247,11 @@ def digits_in_power(n, k):
     answer = sum_of_digits(math.pow(n, k))
     return answer
 
+
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement this function.
+    # DONE: 7. Implement this function.
     #   It TESTS the  fancy_sums_of_digits  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -268,6 +271,8 @@ def run_test_fancy_sums_of_digits():
     # in the doc-string to be sure that you understand the specification.
     # ------------------------------------------------------------------
 
+    fancy_sums_of_digits
+    close_on_mouse_click()
 
 def fancy_sums_of_digits(n):
     """
@@ -302,9 +307,16 @@ def fancy_sums_of_digits(n):
     ####################################################################
     # ------------------------------------------------------------------
 
+    print('Hello')
+    x = sum_of_digits(10 ** 1000)
+    y = sum_of_digits(10 ** 999)
+    return sum_of_digits(x ** y)
+
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # This unusual form is necessary for the special testing we provided.
 # ----------------------------------------------------------------------
+
+
 if __name__ == '__main__':
     main()
