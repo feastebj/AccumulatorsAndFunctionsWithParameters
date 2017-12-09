@@ -16,9 +16,9 @@ import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    #run_test_sum_of_digits()
-    #run_test_digits_in_cube()
-    #run_test_digits_in_power()
+    run_test_sum_of_digits()
+    run_test_digits_in_cube()
+    run_test_digits_in_power()
 
     run_test_fancy_sums_of_digits()
 
@@ -271,8 +271,25 @@ def run_test_fancy_sums_of_digits():
     # in the doc-string to be sure that you understand the specification.
     # ------------------------------------------------------------------
 
-    fancy_sums_of_digits
-    close_on_mouse_click()
+    # Test 1:
+    expected = 19084
+    answer = fancy_sums_of_digits(2)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 124309
+    answer = fancy_sums_of_digits(35)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 1
+    answer = fancy_sums_of_digits(0)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+
 
 def fancy_sums_of_digits(n):
     """
@@ -308,9 +325,10 @@ def fancy_sums_of_digits(n):
     # ------------------------------------------------------------------
 
     print('Hello')
-    x = sum_of_digits(10 ** 1000)
-    y = sum_of_digits(10 ** 999)
-    return sum_of_digits(x ** y)
+    x = sum_of_digits(n ** 1000)
+    y = sum_of_digits(n ** 999)
+    total = sum_of_digits(x ** y)
+    return total
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
