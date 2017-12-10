@@ -97,7 +97,7 @@ def run_test_sum_square_roots():
     print('       actual:  ', answer)
 
     # Test 2:
-    expected = 1
+    expected = 1.414
     answer = sum_square_roots(1)
     print('Test 2 expected:', expected)
     print('       actual:  ', answer)
@@ -123,7 +123,7 @@ def sum_square_roots(n):
       which is about 11.854408.
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -132,10 +132,10 @@ def sum_square_roots(n):
     # ------------------------------------------------------------------
 
     total = 0
-    for k in range(2 * n):
-        k = n
-        total = total + (math.sqrt(k))
-
+    for k in range(n):
+        total = total + (math.sqrt(k * 2))
+        print(total)
+    total = total + math.sqrt(2 * n)
     return total
 
 # ----------------------------------------------------------------------
